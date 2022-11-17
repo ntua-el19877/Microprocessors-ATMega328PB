@@ -51,6 +51,7 @@ ISR(TIMER1_OVF_vect)
 int main() 
 {
     sei();
+    
     TIMSK1=(1<<TOIE1);
     DDRB=0b00111111;                /* PORTB is output */
     EIMSK=(1<<INT1);                //allow external interrupts
